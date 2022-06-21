@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./style/elements/text-style.scss";
+@import "./style/variables/colors.scss";
+@import "./style/variables/fonts.scss";
+
+body {
+    margin: 0px;
+}
