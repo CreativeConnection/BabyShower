@@ -3,7 +3,7 @@
     <img src="{{ image }}" alt="Imagen Cambiador" />
   </div>
   <div class="card__title">{{ title }}</div>
-  <div class="card__buyer">
+  <div *ngIf="buyer" class="card__buyer">
     <div class="ribbon">
       <span class="text">{{ buyer }}</span>
     </div>
