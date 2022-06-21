@@ -11,11 +11,11 @@ export class AppComponent {
   products = [...constans.products.filter((p) => !p.buyer)];
   taps = [
     {
-      title: 'Dsiponible',
+      title: 'Disponible',
       active: true,
     },
     {
-      title: 'Elejido',
+      title: 'Apartado',
       active: false,
     },
     {
