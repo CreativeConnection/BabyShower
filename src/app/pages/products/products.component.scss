@@ -1,18 +1,21 @@
+@import "../../../style/variables/colors.scss";
+
 .products {
-    &__content {
-      max-width: 58rem;
-      margin: 20px auto;
-    }
-    &__taps {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    &__cards__container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
+  &__content {
+    margin: 20px auto;
+    max-width: 58rem;
   }
-  
+  &__taps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__cards__container {
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    padding: 1rem 0;
+  }
+}
