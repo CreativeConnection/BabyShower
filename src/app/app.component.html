@@ -1,8 +1,18 @@
-<section class="app__container">
-  <app-card
-    *ngFor="let item of [1, 2, 3]"
-    image="https://alapalma.com/wp-content/uploads/412Y-PxjUlL._SS500_.jpg"
-    title="Cambiador bebe"
-    buyer="Davixon"
-  ></app-card>
-</section>
+<div class="app__content">
+  <div class="app__taps">
+    <app-tap
+      (click)="handleTap(i)"
+      *ngFor="let tap of taps; index as i"
+      [label]="tap.title"
+      [active]="tap.active"
+    ></app-tap>
+  </div>
+  <section class="app__cards__container">
+    <app-card
+      *ngFor="let product of products"
+      [image]="product.image"
+      [title]="product.title"
+      [buyer]="product.buyer"
+    ></app-card>
+  </section>
+</div>
