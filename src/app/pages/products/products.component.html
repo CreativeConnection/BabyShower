@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="products__content">
+  <div class="products__taps">
+    <app-tap
+      (click)="handleTap(i)"
+      *ngFor="let tap of taps; index as i"
+      [label]="tap.title"
+      [active]="tap.active"
+    ></app-tap>
+  </div>
+  <section class="products__cards__container">
+    <app-card
+      *ngFor="let product of products"
+      [image]="product.image"
+      [title]="product.title"
+      [buyer]="product.buyer"
+    ></app-card>
+  </section>
+</div>

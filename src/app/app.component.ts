@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as constans from './constants/product.constans';
 
 @Component({
   selector: 'app-root',
@@ -7,41 +6,5 @@ import * as constans from './constants/product.constans';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'babyShower';
-  products = [...constans.products.filter((p) => !p.buyer)];
-  taps = [
-    {
-      title: 'Disponible',
-      active: true,
-    },
-    {
-      title: 'Apartado',
-      active: false,
-    },
-    {
-      title: 'Comprado',
-      active: false,
-    },
-  ];
-  handleTap(index: number) {
-    this.taps = this.taps.map((tap, indexTap) => {
-      return {
-        title: tap.title,
-        active: index == indexTap,
-      };
-    });
-    if (index === 0) {
-      this.products = [
-        ...constans.products.filter((p) => !p.buyer && !p.purchased),
-      ];
-    } else if (index == 1) {
-      this.products = [
-        ...constans.products.filter((p) => p.buyer && !p.purchased),
-      ];
-    } else {
-      this.products = [
-        ...constans.products.filter((p) => p.buyer && p.purchased),
-      ];
-    }
-  }
+  
 }
