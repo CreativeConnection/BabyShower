@@ -3,9 +3,15 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { TapComponent } from './tap/tap.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [CardComponent, TapComponent, HeaderComponent],
+  declarations: [
+    CardComponent,
+    TapComponent,
+    HeaderComponent,
+    ProductDetailComponent,
+  ],
   imports: [CommonModule],
   exports: [CardComponent, TapComponent, HeaderComponent],
 })
