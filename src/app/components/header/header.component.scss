@@ -12,7 +12,6 @@
     @include for-tablet {
       grid-template-columns: repeat(8, 1fr);
       gap                  : 16px;
-
     }
 
     @include for-tablet-up {
@@ -41,8 +40,16 @@
       flex-direction : column;
       justify-content: center;
       align-items    : center;
-      h1{
+
+      @include for-phone-up {
+        margin-left: 24px;
+      }
+
+      h1 {
         color: $color-label-secondary;
+      }
+      p {
+        margin-top: 12px;
       }
     }
 
