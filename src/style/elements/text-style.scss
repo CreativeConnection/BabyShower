@@ -1,40 +1,59 @@
+@import "../tools/base-breakpoints.scss";
+
 h1 {
   font-family: SofiaProSemiBold, sans-serif;
   font-style : normal;
   font-weight: 700;
-  font-size  : 48px;
-  line-height: 64px;
+  font-size  : 40px;
+  line-height: 40px;
   margin     : 0;
   text-align : center;
+
+  @include for-phone-up {
+    line-height: 64px;
+    font-size  : 48px;
+  }
 }
 
 h5 {
-  font-family: SofiaProRegular, sans-serif;
-  font-style : normal;
-  font-weight: 500;
-  font-size  : 20px;
-  line-height: 20px;
-  margin     : 0;
-  text-align : left;
+  font-family   : SofiaProRegular, sans-serif;
+  font-style    : normal;
+  font-weight   : 500;
+  font-size     : 20px;
+  line-height   : 20px;
+  margin        : 0;
+  text-align    : left;
   text-transform: capitalize;
 }
+
 h6 {
-  font-family: SofiaProRegular, sans-serif;
-  font-style : normal;
-  font-weight: 100;
-  font-size  : 16px;
-  line-height: 16px;
-  margin     : 0;
-  text-align : left;
+  font-family   : SofiaProRegular, sans-serif;
+  font-style    : normal;
+  font-weight   : 100;
+  font-size     : 16px;
+  line-height   : 16px;
+  margin        : 0;
+  text-align    : left;
   text-transform: capitalize;
 }
+
 span {
-  font-family: SofiaProRegular, sans-serif;
-  font-style : normal;
-  font-weight: 100;
-  font-size  : 14px;
-  line-height: 14px;
-  margin     : 0;
-  text-align : left;
+  font-family   : SofiaProRegular, sans-serif;
+  font-style    : normal;
+  font-weight   : 100;
+  font-size     : 14px;
+  line-height   : 14px;
+  margin        : 0;
+  text-align    : left;
   text-transform: capitalize;
+}
+
+p {
+  font-family   : SofiaProRegular, sans-serif;
+  font-style    : normal;
+  font-weight   : 100;
+  font-size     : 14px;
+  line-height   : 14px;
+  margin        : 0;
+  text-align    : center;
 }

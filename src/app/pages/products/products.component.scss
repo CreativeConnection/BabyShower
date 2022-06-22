@@ -3,6 +3,7 @@
 .products {
   &__content {
     margin: 20px auto;
+    padding: 0 10px;
     max-width: 58rem;
   }
   &__taps {
@@ -12,7 +13,9 @@
   }
   &__cards__container {
     border: 1px solid $color-border;
-    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
