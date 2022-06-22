@@ -27,6 +27,11 @@ export const products: IProduct[] = [
     purchased: false,
   },
   {
+    title: 'Medias',
+    image: '../../../assets/images/medias.jpg',  
+    purchased: false,
+  },
+  {
     title: 'Gorros',
     image: '../../../assets/images/gorros.jpg',  
     purchased: false,
