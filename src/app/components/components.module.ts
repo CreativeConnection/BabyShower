@@ -5,6 +5,7 @@ import { TapComponent } from './tap/tap.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import { BrowserModule } from '@angular/platform-browser';
     TapComponent,
     HeaderComponent,
     ProductDetailComponent,
+    FormComponent,
   ],
   imports: [CommonModule],
-  exports: [CardComponent, TapComponent, HeaderComponent],
+  exports: [CardComponent, TapComponent, HeaderComponent, FormComponent],
 })
 export class ComponentsModule {}

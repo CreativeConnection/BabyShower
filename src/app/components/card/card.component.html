@@ -6,7 +6,14 @@
     <h6>
       {{ title }}
     </h6>
-    <button *ngIf="!buyer && !purchased" class="card__button" (click)="onClick()">Regalar</button>
+    <button
+      type="button"
+      *ngIf="!buyer && !purchased"
+      class="card__button"
+      (click)="onClick()"
+    >
+      Regalar
+    </button>
   </div>
   <div *ngIf="buyer" class="card__buyer">
     <div class="ribbon">

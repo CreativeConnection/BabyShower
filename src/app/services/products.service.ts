@@ -5,6 +5,7 @@ import {
   collection,
   getDoc,
   updateDoc,
+  doc
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { IProduct } from '../models/product.interface';
@@ -13,12 +14,17 @@ import { IProduct } from '../models/product.interface';
 })
 export class ProductsService {
   item$: Observable<any>;
+  colRef: any;
 
   constructor(firestore: Firestore) {
-    const response = collection(firestore, 'regalos');
-    this.item$ = collectionData(response);
+    this.colRef = collection(firestore, 'regalos');
   }
 
-  updateProduct() {
+  getProduct(): Observable<any> {
+    return (this.item$ = collectionData(this.colRef));
+  }
+  updateProduct(uuid: string, data: any) {
+    const docRef = doc(this.colRef, uuid);
+    updateDoc(docRef,{...data})
   }
 }
