@@ -9,7 +9,8 @@ import * as constans from '../../constants/product.constans';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  @ViewChild("form") formViewChild: FormComponent;
+  @ViewChild('form') formViewChild: FormComponent;
+  uuid = '';
   allProducts: any = [];
   products: any = [];
   taps = [
@@ -60,13 +61,13 @@ export class ProductsComponent implements OnInit {
   }
 
   onGif(uid: string) {
-    console.log('uid', uid);
+    this.uuid = uid;
     this.formViewChild.showForm = true;
   }
 
-  confirmGif(uid: string) {
-    const data = { buyer: 'Papitos' };
-    this.productsService.updateProduct(uid, data);
-    return;
+  confirmGif(buyer: string) {
+    const data = { buyer: buyer };
+    this.productsService.updateProduct(this.uuid, data);
+    this.formViewChild.showForm = false;
   }
 }

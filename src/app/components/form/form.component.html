@@ -1,4 +1,28 @@
-<div *ngIf="showForm">
-  <label for="">De parte de :</label>
-  <input type="text" name="" id="" />
+<div class="form__over" *ngIf="showForm">
+  <div class="form__container">
+    <img
+      class="form__image"
+      src="../../../assets/images/elefante-ilustracion.png"
+      alt=""
+    />
+    <form novalidate [formGroup]="formGif">
+      <label class="form__label" for=""><p>De parte de :</p></label>
+      <input
+        class="form__input"
+        formControlName="name"
+        type="text"
+        name=""
+        id=""
+        maxlength="100"
+      />
+    </form>
+    <div class="form__button">
+      <button type="button" class="form__button-cancel" (click)="closeForm()">
+        Cancelar
+      </button>
+      <button type="button" class="form__button-success" (click)="sendBuyer()">
+        Regalar
+      </button>
+    </div>
+  </div>
 </div>

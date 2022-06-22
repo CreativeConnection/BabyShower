@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { FormComponent } from './form/form.component';
     ProductDetailComponent,
     FormComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   exports: [CardComponent, TapComponent, HeaderComponent, FormComponent],
 })
 export class ComponentsModule {}

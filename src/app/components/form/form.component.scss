@@ -1,0 +1,83 @@
+@import "../../../style/variables/colors.scss";
+
+.form {
+  &__over {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__container {
+    padding: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-label-primary;
+    width: 50%;
+    border: none;
+    border-radius: 12px;
+  }
+
+  &__image {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  &__label {
+    margin: 1rem 0;
+  }
+
+  &__input {
+    height: 20px;
+    border: 1px solid $color-primary;
+    outline: none;
+    padding: 8px;
+  }
+
+  &__button {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  &__button-success {
+    width: 150px;
+    height: 28px;
+    margin: 0 auto;
+    outline: none;
+    border: 1px solid $color-primary;
+    border-radius: 14px;
+    background-color: $color-label-primary;
+    color: $color-primary;
+    cursor: pointer;
+    margin-top: 8px;
+    &:hover {
+      background-color: $color-label-secondary;
+      color: $color-label-primary;
+    }
+  }
+  &__button-cancel {
+    width: 150px;
+    height: 28px;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    color: $color-label-primary;
+    background-color: $color-primary;
+    cursor: pointer;
+    margin-top: 8px;
+    &:hover {
+      background-color: $color-label-secondary;
+      color: $color-label-primary;
+    }
+  }
+}
