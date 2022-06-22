@@ -17,6 +17,20 @@
     padding: 0.7rem 0.5rem;
   }
 
+  &__button {
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    background-color: $color-label-primary;
+    color: $color-primary;
+    cursor: pointer;
+    margin-top: 8px;
+    &:hover {
+      background-color: $color-label-secondary;
+      color: $color-label-primary;
+    }
+  }
+
   &__image {
     width: 100%;
     max-width: 200px;
