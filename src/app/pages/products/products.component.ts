@@ -37,8 +37,6 @@ export class ProductsComponent implements OnInit {
     });
   }
   handleTap(index: number) {
-    console.log('this.allProducts ', this.allProducts);
-
     this.taps = this.taps.map((tap, indexTap) => {
       return {
         title: tap.title,
