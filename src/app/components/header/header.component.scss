@@ -1,0 +1,62 @@
+@import "../../../style/variables/colors.scss";
+@import "../../../style/tools/base-breakpoints.scss";
+
+.header {
+  &__container {
+    background-color     : $color-secondary;
+    display              : grid;
+    grid-template-columns: 1fr;
+    gap                  : 0;
+    padding              : 42px 0;
+
+    @include for-tablet {
+      grid-template-columns: repeat(8, 1fr);
+      gap                  : 16px;
+    }
+
+    @include for-tablet-up {
+      grid-template-columns: repeat(10, 1fr);
+      gap                  : 16px;
+    }
+
+    &-title,
+    &-image {
+      @include for-tablet {
+        grid-column: span 4;
+
+      }
+
+      @include for-tablet-up {
+        grid-column: span 5;
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+
+    &-title {
+      display        : flex;
+      flex-direction : column;
+      justify-content: center;
+      align-items    : center;
+
+      @include for-phone-up {
+        margin-left: 24px;
+      }
+
+      h1 {
+        color: $color-label-secondary;
+      }
+      p {
+        margin-top: 12px;
+      }
+    }
+
+    &-image {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../../style/variables/colors.scss";
+
+.card {
+  &__container {
+    border: 1px solid $color-border;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    background-color: $color-primary;
+    color: $color-label-primary;
+    padding: 0.7rem 0.5rem;
+  }
+
+  &__button {
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    background-color: $color-label-primary;
+    color: $color-primary;
+    cursor: pointer;
+    margin-top: 8px;
+    &:hover {
+      background-color: $color-label-secondary;
+      color: $color-label-primary;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  &__buyer {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+  }
+}
+
+.ribbon {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.text {
+  display: inline-block;
+  padding: 0.5em 1em;
+  line-height: 1.2em;
+  background: $color-primary;
+  position: relative;
+}
+.ribbon:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+}
+
+.ribbon:after {
+  top: 0;
+  right: -1em;
+  border-width: 0.7em 1em 0.7em 0em;
+  border-color: $color-primary transparent $color-primary $color-primary;
+}

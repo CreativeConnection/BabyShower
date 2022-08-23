@@ -1,0 +1,23 @@
+<div class="card__container">
+  <div class="card__image">
+    <img src="{{ image }}" alt="Imagen Cambiador" />
+  </div>
+  <div class="card__title">
+    <h6>
+      {{ title }}
+    </h6>
+    <button
+      type="button"
+      *ngIf="!buyer && !purchased"
+      class="card__button"
+      (click)="onClick()"
+    >
+      Regalar
+    </button>
+  </div>
+  <div *ngIf="buyer" class="card__buyer">
+    <div class="ribbon">
+      <span class="text">{{ buyer }}</span>
+    </div>
+  </div>
+</div>
